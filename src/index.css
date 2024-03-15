@@ -27,7 +27,7 @@
 }
 
 .number {
-  background-color: #ffd700;
+  background-color: #c0c0c0;
   border-radius: 10px;
   width: 50px;
   height: 50px;
@@ -39,7 +39,7 @@
 
 .generate-button {
   width: 100%;
-  background-color: #ffd700;
+  background-color: #b87333; 
   border: none;
   border-radius: 5px;
   padding: 15px 20px;
@@ -48,7 +48,7 @@
 }
 
 .generate-button:hover {
-  background-color: #c6a300;
+  background-color: #a35a29; 
 }
 
 @media (max-width: 576px) {
