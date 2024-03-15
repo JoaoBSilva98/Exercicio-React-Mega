@@ -19,10 +19,10 @@ const App = () => {
 
   return (
     <Container className="text-center mt-5">
-      <div className="title-container">
-        <h1 className="title">Mega Sena</h1>
-      </div>
       <div className="box">
+        <div className="title-container">
+          <h1 className="title">Mega Sena</h1>
+        </div>
         <div className="number-container">
           {numbers.map((number, index) => (
             <div key={index} className="number">{number}</div>

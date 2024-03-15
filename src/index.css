@@ -1,29 +1,33 @@
+.box {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 20px;
+}
+
 .title-container {
-  background-color: #f0f0f0;
-  padding: 10px 20px;
-  border-radius: 5px;
+  display: flex;
+  justify-content: center;
   margin-bottom: 20px;
 }
 
 .title {
   font-size: 32px;
   margin: 0;
-}
-
-.box {
-  background-color: #f0f0f0;
-  border-radius: 10px;
-  padding: 20px;
+  background-color: #ffd700;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: #1a1a1a;
 }
 
 .number-container {
   display: flex;
   justify-content: center;
   gap: 10px;
+  margin-bottom: 20px;
 }
 
 .number {
-  background-color: #b7e4c7;
+  background-color: #ffd700;
   border-radius: 10px;
   width: 50px;
   height: 50px;
@@ -35,14 +39,34 @@
 
 .generate-button {
   width: 100%;
-  background-color: #007bff;
+  background-color: #ffd700;
   border: none;
   border-radius: 5px;
-  padding: 10px 20px;
+  padding: 15px 20px;
   font-size: 18px;
-  color: #fff;
+  color: #1a1a1a;
 }
 
 .generate-button:hover {
-  background-color: #0056b3;
+  background-color: #c6a300;
+}
+
+@media (max-width: 576px) {
+  .box {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 28px;
+    padding: 8px 16px;
+  }
+
+  .number-container {
+    flex-wrap: wrap;
+  }
+
+  .number {
+    width: calc(33.33% - 10px);
+    margin-bottom: 10px;
+  }
 }
