@@ -1,27 +1,42 @@
 import React, { useState } from 'react';
-import { Button, Container, Row, Col } from 'react-bootstrap';
+import ReactDOM from 'react-dom';
+import { Button, Container} from 'react-bootstrap';
+import './index.css';
 
 const App = () => {
   const [numbers, setNumbers] = useState([]);
 
+  const generateRandomNumber = () => {
+    const newNumbers = [];
+    while (newNumbers.length < 6) {
+      const randomNumber = Math.floor(Math.random() * 60) + 1;
+      if (!newNumbers.includes(randomNumber)) {
+        newNumbers.push(randomNumber);
+      }
+    }
+    setNumbers(newNumbers);
+  };
+
   return (
-    <Container>
-      <Row className="justify-content-md-center mt-5">
-        <Col md="auto">
-          <h1>Jogo da Mega Sena</h1>
-          <Button variant="primary">Gerar Jogo</Button>
-          <div className="mt-3">
-            <h2>Números Sorteados:</h2>
-            <ul>
-              {numbers.map((number, index) => (
-                <li key={index}>{number}</li>
-              ))}
-            </ul>
-          </div>
-        </Col>
-      </Row>
+    <Container className="text-center mt-5">
+      <h1 className="title">Mega Sena</h1>
+      <div className="box">
+        <div className="number-container">
+          {numbers.map((number, index) => (
+            <div key={index} className="number">{number}</div>
+          ))}
+        </div>
+        <Button variant="primary" onClick={generateRandomNumber} className="generate-button mt-4">
+          Gerar Jogo
+        </Button>
+      </div>
     </Container>
   );
 };
 
-export default App;
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
