@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import { Button, Container} from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
 import './index.css';
 
 const App = () => {
@@ -19,7 +19,9 @@ const App = () => {
 
   return (
     <Container className="text-center mt-5">
-      <h1 className="title">Mega Sena</h1>
+      <div className="title-container">
+        <h1 className="title">Mega Sena</h1>
+      </div>
       <div className="box">
         <div className="number-container">
           {numbers.map((number, index) => (
