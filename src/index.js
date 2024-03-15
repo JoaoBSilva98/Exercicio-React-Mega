@@ -4,17 +4,17 @@ import { Button, Container } from 'react-bootstrap';
 import './index.css';
 
 const App = () => {
-  const [numbers, setNumbers] = useState([]);
+  const [robertoCarlos, setRobertoCarlos] = useState([]);
 
-  const generateRandomNumber = () => {
-    const newNumbers = [];
-    while (newNumbers.length < 6) {
-      const randomNumber = Math.floor(Math.random() * 60) + 1;
-      if (!newNumbers.includes(randomNumber)) {
-        newNumbers.push(randomNumber);
+  const gerarRobertoCarlos = () => {
+    const novaSelecao = [];
+    while (novaSelecao.length < 6) {
+      const gol = Math.floor(Math.random() * 60) + 1;
+      if (!novaSelecao.includes(gol)) {
+        novaSelecao.push(gol);
       }
     }
-    setNumbers(newNumbers);
+    setRobertoCarlos(novaSelecao);
   };
 
   return (
@@ -24,11 +24,11 @@ const App = () => {
           <h1 className="title">Mega Sena</h1>
         </div>
         <div className="number-container">
-          {numbers.map((number, index) => (
-            <div key={index} className="number">{number}</div>
+          {robertoCarlos.map((gol, index) => (
+            <div key={index} className="number">{gol}</div>
           ))}
         </div>
-        <Button variant="primary" onClick={generateRandomNumber} className="generate-button mt-4">
+        <Button variant="primary" onClick={gerarRobertoCarlos} className="generate-button mt-4">
           Gerar Jogo
         </Button>
       </div>
